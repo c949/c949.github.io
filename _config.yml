@@ -1,5 +1,5 @@
 description: > # this means to ignore newlines until "baseurl:"
-  About programming, AWS, search engine things.
+  About mobile payment, tech, programming.
 
 exclude:
   - Gemfile
@@ -7,3 +7,4 @@ exclude:
 
 future: true
 date_format: "%b %-d, %Y"
+title: 库胖TECH
