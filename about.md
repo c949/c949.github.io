@@ -3,20 +3,7 @@ layout: default
 title: About This Blog
 category: about
 ---
-I'm a full stack/Java developer based at Pudong, Shanghai, China.
+一个关注中国移动支付行业的GEEK.
 
-I think building a software should be:
-1. Clean
-2. Automatical
-3. Predictable
-4. Standard
-...
-
-To long to be short:
-> There should be only one best way to do things.
->
-> If there are two best ways, then just choose the first one.
-
-My github page: https://github.com/profullstack
-
-My Email: christian.xiao@outlook.com
+本网站与其它任何公司及/或商标无任何形式关联或合作
+本网站只涉足中国移动支付行业，并公益性、独立运维
