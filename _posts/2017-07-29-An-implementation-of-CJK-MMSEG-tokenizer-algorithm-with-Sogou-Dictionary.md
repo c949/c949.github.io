@@ -1,58 +1,34 @@
 ---
 layout: post
-title: An implementation of CJK MMSEG tokenizer algorithm with Sogou Dictionary.
+title: "2016移动支付第三方市场数据总汇"
 category: programming
 ---
+2016年移动支付市场发展如何，现在移动支付市场覆盖情况如何？下面是2016年移动支付市场数据总汇。
+
+![alt text](http://www.wp0571.com/UploadFile/0/ueditor/upload/image/20170106/6361931102296882869898598.png "screenshot")
 
 
-An implementation of CJK [MMSEG](http://technology.chtsai.org/mmseg/) tokenizer algorithm with Sogou Chinese Dictionary.
+　　蚂蚁金融1月4日发布2016年支付宝全民账单，显示2016年移动支付笔数占整体比例为71%。而2015年这一数据为65%。支付宝方面称，移动支付渗透率的攀升，很大程度上是因为线下手机支付的习惯养成。
 
-Implementation Details:
-* Word dictionary is based on [Patricia Trie](https://github.com/rkapsi/patricia-trie), so the dictionary is efficient when dealing with CJK languages and updating word dictionary dinamically is also possible.
-* For English and special characters, [unicode uax #29](http://unicode.org/reports/tr29/) is used, and the implementation is JDK's java.text package. So given a piece of text, first we use [unicode uax #29](http://unicode.org/reports/tr29/) to tokenize to get English words, special characters and CJK sentences, then we use [MMSEG](http://technology.chtsai.org/mmseg/) to tokenize CJK words based on Sogou Chineses dictionary.
 
-# How to use:
-Cjk-mmseg is hosted on **Jcenter**:
 
-Gradle:
-```
-compile 'com.profullstack:cjk-mmseg:0.0.1'
-```
-Maven:
-```
-<dependency>
-  <groupId>com.profullstack</groupId>
-  <artifactId>cjk-mmseg</artifactId>
-  <version>0.0.1</version>
-  <type>pom</type>
-</dependency>
-```
-Then check the test code in CjkMmsegTest.java:
-```java
-        CjkMmseg seg = new CjkMmseg();
-        String s = "My email address is christian.xiao@outlook.com。我的用户名是christian,我的邮箱是christian.xiao@outlook.com.";
-        Reader r = new StringReader(s);
-        seg.setReader(r);
-        Word w;
-        while((w = seg.nextWord()) != null){
-            System.out.println(w);
-        }
-        seg.close();
-```
-Output:
-```java
-text: My startOffset: 0 endOffset: 1
-text: email startOffset: 3 endOffset: 7
-text: address startOffset: 9 endOffset: 15
-text: is startOffset: 17 endOffset: 18
-text: christian.xiao startOffset: 20 endOffset: 33
-text: outlook.com startOffset: 35 endOffset: 45
-text: 我的 startOffset: 47 endOffset: 48
-text: 用户名 startOffset: 49 endOffset: 51
-text: 是 startOffset: 52 endOffset: 52
-text: christian startOffset: 53 endOffset: 61
-text: 我的邮箱 startOffset: 63 endOffset: 66
-text: 是 startOffset: 67 endOffset: 67
-text: christian.xiao startOffset: 68 endOffset: 81
-text: outlook.com startOffset: 83 endOffset: 93
-```
+　　从省级地区的全年支付总金额来看，沿海的广东排名第一，占到全国的16%，随后是浙江、江苏。而从人均支付金额来看，上海人均支付金额达到14.8万元排名第一，是去年的近1.5倍。随后是浙江、北京、福建、江苏，这五个沿海省份和直辖市均迈入“10万”时代，而在去年，仅仅只有一个上海达到了这个水平。
+
+
+
+　　从移动支付渗透率来看，内陆的西藏以90%的移动支付占比排名第一，随后是青海、甘肃，远远超过沿海省份。事实上，从2012年开始，西藏移动支付比例蝉联冠军。目前西藏所有行政村实现移动通讯信号全覆盖，偏僻村落、广袤牧区的农牧民用移动支付来进行生活必需品的消费。支付宝年度账单数据显示，2016年西藏人均手机充值16.7次，远高于其他地区。
+
+
+
+　　央行最新发布的2016年第三季度支付体系运行总体情况报告显示，移动支付业务保持快速增长。有机构预测，今年年内中国移动支付市场交易规模将达到121590亿元，到2018年前，中国移动支付市场交易规模的年均增长将保持在20%以上，之后还有望保持较长时间的中高速增长。
+
+
+
+　　条码支付凭借其操作简单便捷、搭建成本低廉等特点，近年来在零售业、餐饮业迅速普及。目前各大超市、便利店已全面支持各支付服务提供商的条码支付应用;部分连锁快餐店与支付服务提供商进行合作，也已实现扫码支付等应用。超过一半的用户表示他们使用或接受条码支付。
+
+
+﻿2016年不同地区用户对条码支付使用或接受程度对比
+
+
+
+　　手机支付已成为年轻人最主要的支付方式，有84.9%的中国网民使用过移动支付，其中，95%的网友只选两个工具——支付宝和微信支付。如今微信支付用户达4亿，电商领域排名第一的支付宝目前有超过4.5亿名实名用户。业内人士表示，中国移动支付在支付宝和微信等拥有巨量用户的平台支撑下，必将成为第一市场。这显示全球将迎来一个移动支付的中国世纪。
